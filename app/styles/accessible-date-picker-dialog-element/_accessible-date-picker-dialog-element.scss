@@ -1,0 +1,251 @@
+.datepicker {
+  margin-top : 1em;
+  position   : relative;
+  -webkit-appearance : none;-moz-appearance : none;appearance : none;
+}
+
+.datepicker button.icon {
+  -moz-appearance    : none;
+  -webkit-appearance : none;appearance : none;
+  //border : lightgray 2px solid;
+  margin             : 0;
+  border : transparent solid 1px;
+  padding            : 6px;
+
+  //border-radius: 5px;
+  //text-align: left;
+  //background-color: white;
+  position           : relative;
+  //left: -4px;
+  //top                : 3px;
+  top : 3px;
+  -webkit-border-radius : 4px;-moz-border-radius : 4px;border-radius : 4px;
+  //min-width : 48px;
+  left : - 45px;
+}
+
+.datepicker button.icon:focus {
+  border-color : hsl(216, 80%, 55%);
+  outline      : none;
+}
+
+.datepicker span.arrow {
+  background : transparent;
+  display    : none;
+  margin     : 0;
+  padding    : 0;
+}
+
+.datepicker input {
+  margin : 0;
+  //width  : 20%;
+}
+
+.datepicker .datepickerDialog {
+  background-color : #ffffff;
+  border           : 3px solid hsl(216, 80%, 55%);
+  border-radius    : 5px;
+  clear            : both;
+  display          : none;
+  margin-top       : 1em;
+  padding          : 0;
+  position         : absolute;
+  width            : 45%;
+}
+
+.datepicker .header {
+  background-color : hsl(216, 80%, 55%);
+  color            : white;
+  cursor           : default;
+  display          : flex;
+  font-weight      : bold;
+  justify-content  : space-around;
+  padding          : 7px;
+  text-transform   : uppercase;
+}
+
+.datepicker .header h2 {
+  color          : white;
+  display        : inline-block;
+  font-size      : 1em;
+  font-weight    : bold;
+  margin         : 0;
+  padding        : 0;
+  text-transform : none;
+}
+
+.datepicker .header button {
+  background   : transparent;
+  border-style : none;
+}
+
+.datepicker .datepickerDialog button::-moz-focus-inner {
+  border : 0;
+}
+
+.datepicker {
+  .prevYear, .prevMonth, .nextMonth, .nextYear {
+    color   : white;
+    height  : 24px;
+    padding : 4px;
+    width   : 24px;
+  }
+}
+
+.datepicker {
+  .prevYear:focus,
+  .prevMonth:focus,
+  .nextMonth:focus,
+  .nextYear:focus {
+    border        : 2px solid white;
+    border-radius : 4px;
+    outline       : 0;
+    padding       : 2px;
+  }
+
+  .dialogButtonGroup {
+    margin-bottom : 1em;
+    margin-right  : 1em;
+    margin-top    : 1em;
+    text-align    : right;
+  }
+
+  .dialogButton {
+    background-color : hsl(216, 80%, 92%);
+    border           : 1px solid hsl(216, 80%, 92%);
+    border-radius    : 5px;
+    color            : black;
+    font-size        : 0.85em;
+    margin-left      : 1em;
+    outline          : none;
+    padding          : 5px;
+    width            : 5em;
+  }
+
+  .dialogButton:focus {
+    border  : 2px solid black;
+    padding : 4px;
+  }
+
+  .fa-calendar-alt {
+    color : hsl(216, 89%, 72%);
+  }
+
+  .monthYear {
+    display    : inline-block;
+    text-align : center;
+    width      : 12em;
+  }
+
+  table.dates {
+    padding-left  : 1em;
+    padding-right : 1em;
+    padding-top   : 1em;
+    width         : 100%;
+  }
+
+  table.dates th,
+  table.dates td {
+    text-align : center;
+  }
+  .dateRow {
+    border : 1px solid black;
+  }
+
+  .dateCell {
+    border  : 0;
+    height  : 40px;
+    margin  : 0;
+    outline : 0;
+    padding : 0;
+    width   : 40px;
+  }
+
+  .dateButton {
+    background    : #eeeeee;
+    border        : 1px solid #eeeeee;
+    border-radius : 5px;
+    font-size     : 15px;
+    height        : 100%;
+    line-height   : inherit;
+    margin        : 0;
+    padding       : 0;
+    width         : 100%;
+
+
+    &:focus,
+    &:hover {
+      background-color : hsl(216, 80%, 92%);
+      padding          : 0;
+    }
+
+    &:focus {
+      border-color : rgb(100, 100, 100);
+      border-width : 2px;
+      outline      : 0;
+    }
+
+    &[aria-selected] {
+      border-color : rgb(100, 100, 100);
+    }
+
+    &[tabindex="0"] {
+      background-color : hsl(216, 80%, 92%);
+    }
+  }
+
+
+
+  .disabled {
+    color : #afafaf;
+  }
+
+  .disabled:hover {
+    color : black;
+  }
+
+  .dateButton:disabled {
+    background-color : #ffffff;
+    border           : none;
+    color            : #777777;
+    cursor           : not-allowed;
+  }
+
+  .message {
+    background   : hsl(216, 80%, 55%);
+    color        : white;
+    height       : 1.75em;
+    padding-left : 1em;
+    padding-top  : 0.25em;
+  }
+
+}
+
+.prevYear, .prevMonth, .nextMonth, .nextYear {
+  display : flex;
+  flex-direction : row;
+  align-items : stretch;
+  align-content : stretch;
+  justify-content : center;
+  width : auto;
+  height : auto !important;
+  padding : 0;
+  line-height : 1;
+}
+
+
+.datepicker label {
+  display : block;
+  font-weight : 600;
+  line-height : 1;
+}
+.datepicker input {
+  //display : block;
+  line-height : 1;
+  border: solid 2px lightgray;
+  border-radius: 4px;
+  padding : .5rem;
+  &:placeholder-shown, &::placeholder {
+    color: lightgray !important;
+  }
+}

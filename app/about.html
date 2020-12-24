@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessible Date Picker Dialog Element | About</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body class="presentation">
+    <!--[if IE]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+
+    <!-- NAVIGATION BAR ———————————————————————————————————————————————————— -->
+    <nav role="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="installation.html">Installation</a></li>
+        <li><a href="usage.html">Usage</a></li>
+        <li><a href="accessible-date-picker-dialog-element-demo.html">Live Demo</a></li>
+        <li><a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="github-link-icon-svg"><title>logo-github</title><g><path fill-rule="evenodd" clip-rule="evenodd" d="M16,0.4c-8.8,0-16,7.2-16,16c0,7.1,4.6,13.1,10.9,15.2 c0.8,0.1,1.1-0.3,1.1-0.8c0-0.4,0-1.4,0-2.7c-4.5,1-5.4-2.1-5.4-2.1c-0.7-1.8-1.8-2.3-1.8-2.3c-1.5-1,0.1-1,0.1-1 c1.6,0.1,2.5,1.6,2.5,1.6c1.4,2.4,3.7,1.7,4.7,1.3c0.1-1,0.6-1.7,1-2.1c-3.6-0.4-7.3-1.8-7.3-7.9c0-1.7,0.6-3.2,1.6-4.3 c-0.2-0.4-0.7-2,0.2-4.2c0,0,1.3-0.4,4.4,1.6c1.3-0.4,2.6-0.5,4-0.5c1.4,0,2.7,0.2,4,0.5C23.1,6.6,24.4,7,24.4,7 c0.9,2.2,0.3,3.8,0.2,4.2c1,1.1,1.6,2.5,1.6,4.3c0,6.1-3.7,7.5-7.3,7.9c0.6,0.5,1.1,1.5,1.1,3c0,2.1,0,3.9,0,4.4 c0,0.4,0.3,0.9,1.1,0.8C27.4,29.5,32,23.5,32,16.4C32,7.6,24.8,0.4,16,0.4z"></path></g></svg>
+        </a></li>
+      </ul>
+    </nav>
+
+    <!-- PAGE HEADER ————————————————————————————————————————————————————————-->
+    <header role="banner">
+      <hgroup>
+        <h1>Accessible Date Picker Dialog Element</h1>
+        <h2>About</h2>
+      </hgroup>
+    </header>
+
+    <!-- MAIN PAGE CONTENT ————————————————————————————————————————————————— -->
+    <main role="main">
+      <section>
+        <h3>Section Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+           Ad dolor et exercitationem fugit, in inventore nisi officiis
+           perferendis quas repudiandae saepe temporibus voluptates?
+           Accusantium aspernatur dolorum fugiat nobis officiis porro!</p>
+      </section>
+
+      <section>
+        <h3>About</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Ad cumque dolorem dolorum esse eveniet in incidunt ipsa
+        laborum magni officiis omnis, perspiciatis quos tempore
+        veniam voluptate? Labore laborum possimus temporibus?</p>
+        <pre><code class="language-html">&lt;!-- / DATE PICKER DIAKOG / [START] -------------------------------- --&gt;
+&lt;div id=&quot;myDatepicker&quot; class=&quot;datepicker&quot;&gt;
+
+  &lt;!-- Date Picker : Input Field ----------------------------------- --&gt;
+  &lt;div class=&quot;date&quot;&gt;
+    &lt;label for=&quot;id-textbox-1&quot;&gt;Date&lt;/label&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;mm/dd/yyyy&quot; id=&quot;id-textbox-1&quot; aria-autocomplete=&quot;none&quot;&gt;
+    &lt;button class=&quot;icon&quot; aria-label=&quot;Choose Date&quot;&gt;&lt;!-- SVG Content . . . --&gt;&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;!-- ------------------------------------------------------------- --&gt;
+
+  &lt;!-- Date Picker : Modal Dialog ---------------------------------- --&gt;
+  &lt;div id=&quot;id-datepicker-1&quot; class=&quot;datepickerDialog&quot; role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;id-dialog-label&quot;&gt;
+
+    &lt;!-- Date Picker : Modal Dialog - Header ----------------------- --&gt;
+    &lt;div class=&quot;header&quot;&gt;
+      &lt;!-- Top Left (Previous Month / Year) Buttons --&gt;
+
+      &lt;button class=&quot;prevYear&quot; aria-label=&quot;previous year&quot;&gt;
+        &lt;!--  . . . (SVG Content) . . . --&gt;
+      &lt;/button&gt;
+
+      &lt;button class=&quot;prevMonth&quot; aria-label=&quot;previous month&quot;&gt;
+        &lt;!--  . . . (SVG Content) . . . --&gt;
+      &lt;/button&gt;
+
+      &lt;!-- Currently Selected (MONTH / YEAR) Heading --&gt;
+      &lt;h2 id=&quot;id-dialog-label&quot; class=&quot;monthYear&quot; aria-live=&quot;polite&quot;&gt;Month Year&lt;/h2&gt;
+
+
+      &lt;button class=&quot;nextMonth&quot; aria-label=&quot;next month&quot;&gt;
+        &lt;!--  . . . (SVG Content) . . . --&gt;
+      &lt;/button&gt;
+
+      &lt;button class=&quot;nextYear&quot; aria-label=&quot;next year&quot;&gt;
+        &lt;!--  . . . (SVG Content) . . . --&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- ----------------------------------------------------------- --&gt;
+
+    &lt;!-- Date Picker : Modal Dialog - Date Selection Grid (Table) -- --&gt;
+    &lt;table id=&quot;myDatepickerGrid&quot; class=&quot;dates&quot; role=&quot;grid&quot; aria-labelledby=&quot;id-dialog-label&quot;&gt;
+
+      &lt;!-- Date Selection Grid Table [Table Header] ---------------- --&gt;
+      &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;col&quot; abbr=&quot;Sunday&quot;&gt;Su&lt;/th&gt;
+        &lt;th scope=&quot;col&quot; abbr=&quot;Monday&quot;&gt;Mo&lt;/th&gt;
+        &lt;th scope=&quot;col&quot; abbr=&quot;Tuesday&quot;&gt;Tu&lt;/th&gt;
+        &lt;th scope=&quot;col&quot; abbr=&quot;Wednesday&quot;&gt;We&lt;/th&gt;
+        &lt;th scope=&quot;col&quot; abbr=&quot;Thursday&quot;&gt;Th&lt;/th&gt;
+        &lt;th scope=&quot;col&quot; abbr=&quot;Friday&quot;&gt;Fr&lt;/th&gt;
+        &lt;th scope=&quot;col&quot; abbr=&quot;Saturday&quot;&gt;Sa&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;/thead&gt;
+
+      &lt;!-- Date Selection Grid Table [Table Body] ---------------- --&gt;
+      &lt;tbody&gt;
+
+      &lt;!-- Row 1 --&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot; disabled=&quot;&quot;&gt;25&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot; disabled=&quot;&quot;&gt;26&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot; disabled=&quot;&quot;&gt;27&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot; disabled=&quot;&quot;&gt;28&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot; disabled=&quot;&quot;&gt;29&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot; disabled=&quot;&quot;&gt;30&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;1&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;!-- Row 2 --&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;2&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;3&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;4&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;5&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;6&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;7&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;8&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;!-- Row 3 --&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;9&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;10&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;11&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;12&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;13&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;0&quot;&gt;14&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;15&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;!-- Row 4 --&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;16&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;17&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;18&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;19&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;20&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;21&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;22&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;!-- Row 5 --&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;23&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;24&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;25&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;26&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;27&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;28&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;29&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;!-- Row 6 --&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;30&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot;&gt;31&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot; disabled=&quot;&quot;&gt;1&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot; disabled=&quot;&quot;&gt;2&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot; disabled=&quot;&quot;&gt;3&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot; disabled=&quot;&quot;&gt;4&lt;/button&gt;&lt;/td&gt;
+        &lt;td class=&quot;dateCell&quot;&gt;&lt;button class=&quot;dateButton&quot; tabindex=&quot;-1&quot; disabled=&quot;&quot;&gt;5&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;!-- Date Picker : Modal Dialog - Footer ----------------------- --&gt;
+    &lt;div class=&quot;dialogButtonGroup&quot;&gt;
+      &lt;!-- Button Footer - CANCEL Button --&gt;
+      &lt;button class=&quot;dialogButton&quot; type=&quot;button&quot; value=&quot;cancel&quot;&gt;Cancel&lt;/button&gt;
+
+      &lt;!-- Button Footer - OKAY Button --&gt;
+      &lt;button class=&quot;dialogButton&quot; type=&quot;button&quot; value=&quot;ok&quot;&gt;OK&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- MESSAGE ARIA-LIVE TEST AREA --&gt;
+    &lt;div class=&quot;message&quot; aria-live=&quot;polite&quot;&gt;Test&lt;/div&gt;
+
+  &lt;!-- END OF... DATE PICKER : MODAL DIALOG --&gt;
+  &lt;/div&gt;
+  &lt;!-- ... END --&gt;
+&lt;/div&gt;
+&lt;!-- / DATE PICKER DIALOG / [END] ---------------------------------- --&gt;</code></pre>
+      </section>
+    </main>
+
+    <!-- PAGE FOOTER ————————————————————————————————————————————————————————-->
+    <footer role="contentinfo">
+      <p>Copyright &copy; 2020. All Rights Reserved</p>
+    </footer>
+
+    <!-- ==== JAVASCRIPT =================================================== -->
+    <!-- build:js scripts/vendor.js -->
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="../node_modules/prismjs/prism.js"></script>
+    <script src="../node_modules/prismjs/dependencies.js"></script>
+    <script src="../node_modules/prismjs/components.js"></script>
+    <script src="../node_modules/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

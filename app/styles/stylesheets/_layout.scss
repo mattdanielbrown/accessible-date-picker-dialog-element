@@ -1,0 +1,235 @@
+
+/* Container Definition ----------------------------------------------------- */
+
+// ... As a %placeholder ...
+%container {
+  width: 90%;
+  //max-width: 768px;
+  max-width: 38em;
+  margin: 0 auto;
+}
+// ... @extend'ed to a .class
+.container { @extend %container; }
+
+/* Container Assignment ----------------------------------------------------- */
+[role=banner] hgroup, [role=main] > * {
+  @extend %container;
+}
+
+
+
+/* Major Page Regions ------------------------------------------------------- */
+
+// Page Header
+[role=banner] {
+
+}
+
+// Page Header and Page Footer
+[role=banner], [role=contentinfo] {
+  padding : 2rem 0;
+  background-color : ghostwhite;
+}
+
+// Page Footer
+[role=contentinfo] {
+  text-align : center;
+  margin : 0;
+  p {
+    vertical-align : middle;
+    text-align : center;
+    font-size : small;
+    margin : 0 auto;
+    padding : 0;
+    color: gray;
+  }
+}
+
+// Page Main
+[role=main] {
+  background-color : #ffffff;
+  padding : 1rem 0;
+  min-height : 90vh;
+}
+
+section {
+  padding : 1rem 0;
+  margin-bottom : 2rem;
+  #{$heading-selectors} {
+    &:first-child {
+      margin-bottom : 2rem;
+      margin-top : 1rem;
+    }
+  }
+  header {
+    #{$heading-selectors} {
+      margin : 0 auto 1rem !important;
+    }
+  }
+}
+
+
+
+/* General List Reset ------------------------------------------------------- */
+ul {
+  @extend %list-reset;
+}
+
+
+
+/* Navigation Bar ----------------------------------------------------------- */
+nav {
+  padding : 0;
+  margin : 0;
+  border : none;
+  background-color : $navbar-color;
+  ul {
+    width : 100%;
+    display : flex;
+    flex-direction : column;
+    text-align : center;
+    //align-items : center;
+    //align-content : center;
+    //justify-content : center;
+    justify-content : stretch;
+    border : none;
+    background-color : $navbar-color;
+  }
+  li {
+    //display : block;
+    border : none;
+    display : inline-block;
+  }
+  a {
+    text-decoration : none;
+    font-weight : 500;
+    color: white;
+    text-align : center;
+    font-size : 14px;
+    padding : 1em 0 !important;
+    display : unset;
+    background-color : $navbar-color;
+    border : $navbar-color solid 2px;
+    //letter-spacing : .5px;
+    cursor : pointer;
+    //padding : 1rem 0;
+    transition: all 120ms;
+    line-height : 1;
+    width : 100%;
+    height : 100%;
+    &:hover {
+      background-color : darken($navbar-color, 10%);
+      border-color : darken($navbar-color, 10%);
+    }
+    &:focus {
+      background-color : darken($navbar-color, 15%);
+      border-color : $primary-color;
+      outline : none;
+    }
+    &:active {
+      background-color : darken($navbar-color, 25%);
+      border-color : darken($navbar-color, 25%);
+    }
+    &.active {
+      background-color : darken($navbar-color, 5%);
+      border-color : darken($navbar-color, 5%);
+      //color: rgba(white, 0.25);
+      cursor : not-allowed;
+      pointer-events: none;
+    }
+  }
+}
+nav {
+  @include min-width(560px) {
+    position : relative;
+    height : 100% !important;
+    padding : 0;
+    margin : 0;
+    contain: content;
+    ul {
+      width: 90%;
+      //max-width: 768px;
+      max-width: 38em;
+      margin: 0 auto;
+      display : flex;
+      flex-direction : row;
+      //align-items : center;
+      align-content : center;
+      //align-items : stretch !important;
+      //align-content : stretch !important;
+      justify-content : flex-end;
+      //height : auto !important;
+      contain: content;
+    }
+    li {
+      display : unset;
+    }
+    a {
+      width : auto;
+      //height : auto;
+      margin : 0 !important;
+      line-height : 2 !important;
+      padding : .5em !important;
+      display : inline-block;
+      //max-height : 2.25rem;
+      vertical-align : middle;
+      //height : 100% !important;
+      contain: content;
+      overflow : hidden;
+      svg {
+        box-sizing: border-box !important;
+        line-height : 0;
+        vertical-align : middle;
+        margin : 0 auto;
+        padding : 0;
+        display : inline-block;
+        contain: content;
+        overflow : hidden;
+        *::before, *::after {
+          overflow : hidden;
+          contain: content;
+          display : inline-block;
+          vertical-align : middle;
+          margin : 0;
+          box-sizing: border-box !important;
+          line-height : 0;
+        }
+      }
+    }
+  }
+}
+
+/* GitHub Link SVG ---------------------------------------------------------- */
+#github-link-icon-svg {
+  color: white;
+  stroke: white !important;
+  fill: white !important;
+  width : 100%;
+  height : 100%;
+  margin : auto;
+  vertical-align : middle;
+  display : inline-block !important;
+  max-width : 28px;
+  max-height : 28px !important;
+  //padding : 1px;
+  line-height : 0;
+  box-sizing: border-box !important;
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+    fill: white !important;
+    //color: inherit;
+    stroke: white !important;
+    line-height : 0;
+  }
+
+  //overflow : visible;
+}
+.link-icon-svg-content-wrapper {
+  //padding : 4px;
+  width : 100%;
+  height : 100%;
+  margin : auto;
+  //vertical-align : middle;
+  display : inline !important;
+
+}

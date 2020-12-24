@@ -1,0 +1,26 @@
+:root {
+  font-size : 20px;
+}
+
+html {
+  line-height : 1;
+  margin : 0;
+  padding : 0;
+}
+body, p {
+  line-height : 1.5;
+}
+
+p {
+  margin-bottom : 1rem;
+  &:last-child, &:last-of-type {
+    margin-bottom : 2rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height : 1;
+  margin : 0 auto 1rem auto;
+}
+
+

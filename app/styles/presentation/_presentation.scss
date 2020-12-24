@@ -1,0 +1,13 @@
+@import "../../../node_modules/firacode/distr/fira_code.css";
+@import "../../../node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css";
+@import "../../../node_modules/prismjs/themes/prism.css";
+//@import "../../../node_modules/dracula-prism/css/dracula.css";
+@import "../../../node_modules/dracula-prism/css/dracula-prism.css";
+
+.presentation {
+  pre, code, pre code, samp, output, var, kbd {
+    font-family : Fira Code, "Fira Code", fira code, ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size : x-small;
+  }
+}
+
